@@ -1,3 +1,4 @@
+// Comments for understnding of the program in future
 package org.p1;
 
 class Logger {
