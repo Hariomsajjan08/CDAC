@@ -47,6 +47,7 @@ public class RemoveDuplicate {
         
 
         System.out.println("Array after removing duplicates: " + Arrays.toString(Arrays.copyOf(arr, newLength)));
+        System.out.println(newLength);
         
         sc.close(); 
     }
