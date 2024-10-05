@@ -29,10 +29,10 @@ class Queue {
         arr[++rear] = ele;
     }
 
-    void deque() {
+    int deque() {
         if (isEmpty()) {
             System.out.println("Queue is empty");
-            return;
+            return -1;
         }
         int dequeuedElement = arr[front];
         if (front >= rear) { 
@@ -42,11 +42,18 @@ class Queue {
             front++;
         }
         System.out.println("Dequeued: " + dequeuedElement);
+        return dequeuedElement;
     }
 
     void display()
     {
-        System.out.print("Queue: "+Arrays.toString(arr));
+        if(!isEmpty()){
+            for(int i = front; i<= rear; i++)
+            {
+                System.out.println(arr[i]);
+            }
+        }
+        
     }
 }
 
@@ -55,8 +62,8 @@ public class SimpleQueue {
         Queue q = new Queue();
         
 
-        q.enque(1);
-        q.enque(2);
+        q.enque(5);
+        q.enque(10);
 
         q.deque();
         q.display();
